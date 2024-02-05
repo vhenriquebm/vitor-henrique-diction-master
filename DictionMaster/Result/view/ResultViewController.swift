@@ -10,6 +10,8 @@ import UIKit
 class ResultViewController: ViewController {
     @IBOutlet weak var resultTableViewController: UITableView!
     
+    var delegate: ResultViewModelProtocol?
+    
     private var result: [SearchWordResponse] = []
     
     override func viewDidLoad() {
@@ -26,6 +28,10 @@ class ResultViewController: ViewController {
     private func configureTableView() {
         resultTableViewController.delegate = self
         resultTableViewController.dataSource = self
+    }
+    
+    private func goToSubscribeViewController() {
+        delegate?.goToSubscribeViewController()
     }
 }
 

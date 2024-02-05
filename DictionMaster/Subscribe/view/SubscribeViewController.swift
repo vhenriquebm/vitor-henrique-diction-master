@@ -19,4 +19,8 @@ class SubscribeViewController: ViewController {
     
     override func configureBindings() {
     }
+    
+    private func backToRoot(){
+        
+    }
 }

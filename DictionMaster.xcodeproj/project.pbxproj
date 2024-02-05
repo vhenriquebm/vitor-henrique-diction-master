@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		15402BB28058D7B51B7A6544 /* Pods_DictionMaster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B3B82E7551FCEC195DBB633 /* Pods_DictionMaster.framework */; };
 		420EA17F2B6EAEA40005C40F /* SubscribeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420EA17E2B6EAEA40005C40F /* SubscribeViewController.swift */; };
+		420EA1822B70F2440005C40F /* SearchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420EA1812B70F2440005C40F /* SearchCoordinator.swift */; };
+		420EA1852B70F42A0005C40F /* ResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420EA1842B70F42A0005C40F /* ResultViewModel.swift */; };
+		420EA1892B70F4660005C40F /* SubscribeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420EA1882B70F4660005C40F /* SubscribeViewModel.swift */; };
+		420EA18C2B70F6C70005C40F /* SearchCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420EA18B2B70F6C70005C40F /* SearchCoordinatorProtocol.swift */; };
+		420EA18E2B70F6E00005C40F /* ResultCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420EA18D2B70F6E00005C40F /* ResultCoordinatorProtocol.swift */; };
+		420EA1902B70F70D0005C40F /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420EA18F2B70F70D0005C40F /* Coordinator.swift */; };
 		421545362B6E93F30084A934 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 421545352B6E93F30084A934 /* HeaderView.xib */; };
 		421545382B6E96590084A934 /* BottomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 421545372B6E96590084A934 /* BottomView.xib */; };
 		4215453A2B6E982F0084A934 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421545392B6E982F0084A934 /* ResultViewController.swift */; };
@@ -29,6 +35,12 @@
 
 /* Begin PBXFileReference section */
 		420EA17E2B6EAEA40005C40F /* SubscribeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeViewController.swift; sourceTree = "<group>"; };
+		420EA1812B70F2440005C40F /* SearchCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchCoordinator.swift; path = ../SearchCoordinator.swift; sourceTree = "<group>"; };
+		420EA1842B70F42A0005C40F /* ResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewModel.swift; sourceTree = "<group>"; };
+		420EA1882B70F4660005C40F /* SubscribeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeViewModel.swift; sourceTree = "<group>"; };
+		420EA18B2B70F6C70005C40F /* SearchCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		420EA18D2B70F6E00005C40F /* ResultCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		420EA18F2B70F70D0005C40F /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		421545352B6E93F30084A934 /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 		421545372B6E96590084A934 /* BottomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomView.xib; sourceTree = "<group>"; };
 		421545392B6E982F0084A934 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +79,7 @@
 		420EA1792B6EAC540005C40F /* Result */ = {
 			isa = PBXGroup;
 			children = (
+				420EA1832B70F41C0005C40F /* viewmodel */,
 				420EA17C2B6EACAE0005C40F /* view */,
 			);
 			path = Result;
@@ -83,9 +96,53 @@
 		420EA17D2B6EAE930005C40F /* Subscribe */ = {
 			isa = PBXGroup;
 			children = (
-				420EA17E2B6EAEA40005C40F /* SubscribeViewController.swift */,
+				420EA1872B70F44A0005C40F /* viewmodel */,
+				420EA1862B70F4420005C40F /* view */,
 			);
 			path = Subscribe;
+			sourceTree = "<group>";
+		};
+		420EA1802B70F2220005C40F /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				420EA18A2B70F6AA0005C40F /* protocols */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		420EA1832B70F41C0005C40F /* viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+				420EA1842B70F42A0005C40F /* ResultViewModel.swift */,
+			);
+			path = viewmodel;
+			sourceTree = "<group>";
+		};
+		420EA1862B70F4420005C40F /* view */ = {
+			isa = PBXGroup;
+			children = (
+				420EA17E2B6EAEA40005C40F /* SubscribeViewController.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		420EA1872B70F44A0005C40F /* viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+				420EA1882B70F4660005C40F /* SubscribeViewModel.swift */,
+			);
+			path = viewmodel;
+			sourceTree = "<group>";
+		};
+		420EA18A2B70F6AA0005C40F /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+				420EA1812B70F2440005C40F /* SearchCoordinator.swift */,
+				420EA18B2B70F6C70005C40F /* SearchCoordinatorProtocol.swift */,
+				420EA18D2B70F6E00005C40F /* ResultCoordinatorProtocol.swift */,
+				420EA18F2B70F70D0005C40F /* Coordinator.swift */,
+			);
+			path = protocols;
 			sourceTree = "<group>";
 		};
 		4215453B2B6E98710084A934 /* Search */ = {
@@ -181,6 +238,7 @@
 				420EA1792B6EAC540005C40F /* Result */,
 				4215453B2B6E98710084A934 /* Search */,
 				420EA17D2B6EAE930005C40F /* Subscribe */,
+				420EA1802B70F2220005C40F /* Coordinator */,
 				42F71A462B6E8175001BF704 /* AppDelegate.swift */,
 				42F71A482B6E8175001BF704 /* SceneDelegate.swift */,
 				42F71A4A2B6E8175001BF704 /* SearchWordViewController.swift */,
@@ -330,9 +388,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				421545432B6E99560084A934 /* SearchNewViewModel.swift in Sources */,
+				420EA1852B70F42A0005C40F /* ResultViewModel.swift in Sources */,
 				421545412B6E98E90084A934 /* SearchNewWordService.swift in Sources */,
+				420EA1892B70F4660005C40F /* SubscribeViewModel.swift in Sources */,
+				420EA1822B70F2440005C40F /* SearchCoordinator.swift in Sources */,
 				42ED58D52B6EA2AF005FFFFF /* EventLogger.swift in Sources */,
+				420EA18C2B70F6C70005C40F /* SearchCoordinatorProtocol.swift in Sources */,
 				4215453A2B6E982F0084A934 /* ResultViewController.swift in Sources */,
+				420EA1902B70F70D0005C40F /* Coordinator.swift in Sources */,
+				420EA18E2B70F6E00005C40F /* ResultCoordinatorProtocol.swift in Sources */,
 				42ED58D82B6EA4C3005FFFFF /* ViewController.swift in Sources */,
 				42F71A512B6E8175001BF704 /* DictionMaster.xcdatamodeld in Sources */,
 				421545462B6E998D0084A934 /* SearchNewWordProtocol.swift in Sources */,
