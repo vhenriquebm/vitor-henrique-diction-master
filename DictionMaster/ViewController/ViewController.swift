@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class ViewController: UIViewController {
+    let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         configureViews()

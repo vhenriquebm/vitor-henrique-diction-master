@@ -8,8 +8,7 @@
 import Foundation
 import Alamofire
 
-typealias searchCompletion = (Result <[SearchWordResponse], Error>) -> Void
-
+typealias searchCompletion = (Result <[SearchWordResponse], Error>, Int) -> Void
 
 class SearchNewWordService: SearchNewWordServiceProtocol {
     
@@ -24,14 +23,18 @@ class SearchNewWordService: SearchNewWordServiceProtocol {
             
             switch response.result {
             case let .success(searchResponse):
-                completion(.success(searchResponse))
+                completion(.success(searchResponse), status_code)
+                
+                
                 EventLogger.log(path: url,
                                 statusCode: status_code,
                                 headers: response.request?.headers.dictionary ?? [:],
                                 response: response.response,
                                 responseValue: searchResponse)
+                
+                DataStorageManager.shared.setDataBase(with: searchResponse)
             case let .failure(error):
-                completion(.failure(error))
+                completion(.failure(error), status_code)
                 EventLogger.log(path: url,
                                 statusCode: status_code,
                                 headers: response.request?.headers.dictionary ?? [:],

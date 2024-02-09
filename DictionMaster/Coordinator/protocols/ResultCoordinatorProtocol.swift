@@ -8,5 +8,6 @@
 import Foundation
 
 protocol ResultCoordinatorProtocol: Coordinator {
-    func goToSubscribreViewController()
+    func back()
+    func backToRootViewController()
 }

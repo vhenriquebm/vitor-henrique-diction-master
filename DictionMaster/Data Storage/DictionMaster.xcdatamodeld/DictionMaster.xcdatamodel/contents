@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22522" systemVersion="23D56" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="DefinitionEntity" representedClassName="DefinitionEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="definition" optional="YES" attributeType="String"/>
+        <attribute name="example" optional="YES" attributeType="String"/>
+        <relationship name="meaning" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MeaningEntity" inverseName="definitions" inverseEntity="MeaningEntity"/>
+    </entity>
+    <entity name="MeaningEntity" representedClassName="MeaningEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="partOfSpeech" optional="YES" attributeType="String"/>
+        <relationship name="definitions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DefinitionEntity" inverseName="meaning" inverseEntity="DefinitionEntity"/>
+        <relationship name="searchWordResponse" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SearchWordResponseEntity" inverseName="meanings" inverseEntity="SearchWordResponseEntity"/>
+    </entity>
+    <entity name="PhoneticsEntity" representedClassName="PhoneticsEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="audio" optional="YES" attributeType="String"/>
+        <attribute name="text" optional="YES" attributeType="String"/>
+        <relationship name="searchWordResponse" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SearchWordResponseEntity" inverseName="phonetics" inverseEntity="SearchWordResponseEntity"/>
+    </entity>
+    <entity name="SearchWordResponseEntity" representedClassName="SearchWordResponseEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="phonetic" optional="YES" attributeType="String"/>
+        <attribute name="word" optional="YES" attributeType="String"/>
+        <relationship name="meanings" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MeaningEntity" inverseName="searchWordResponse" inverseEntity="MeaningEntity"/>
+        <relationship name="phonetics" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PhoneticsEntity" inverseName="searchWordResponse" inverseEntity="PhoneticsEntity"/>
+    </entity>
+</model>

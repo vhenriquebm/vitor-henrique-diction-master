@@ -6,9 +6,11 @@
 //
 
 import Foundation
+import RxSwift
 
 protocol SearchNewWordProtocol: AnyObject {
     func searchNewWord(with word: String)
+    var isLoading: BehaviorSubject<Bool> { get }
 }
 
 protocol SearchNewWordServiceProtocol {

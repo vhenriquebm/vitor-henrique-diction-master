@@ -8,6 +8,11 @@ target 'DictionMaster' do
   # Pods for DictionMaster
 
     pod 'Alamofire'
-
-
+    pod 'RxSwift'
+    pod 'RxCocoa'
+    pod 'RxGesture'
+    pod 'RxOptional'
+    pod 'RxDataSources'
+    pod 'RxSwiftExt'
+    
 end

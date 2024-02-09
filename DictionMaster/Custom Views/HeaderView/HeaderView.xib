@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HeaderView" customModule="DictionMaster" customModuleProvider="target">
+            <connections>
+                <outlet property="mainView" destination="iN0-l3-epB" id="J0i-e5-YGh"/>
+                <outlet property="phoneticTextLabel" destination="4o3-UL-6M9" id="ZIT-Iu-8qX"/>
+                <outlet property="playSoundButton" destination="hpS-bC-gTK" id="GQJ-4M-AVO"/>
+                <outlet property="wordLabel" destination="SqM-c2-HhO" id="1rW-e5-IQr"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="300"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Education" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SqM-c2-HhO">
+                    <rect key="frame" x="20" y="19.999999999999996" width="202.66666666666666" height="52.666666666666657"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="45"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpS-bC-gTK">
+                    <rect key="frame" x="20" y="92.666666666666671" width="46" height="46.000000000000014"/>
+                    <color key="backgroundColor" name="AccentColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="46" id="JMg-98-BTS"/>
+                        <constraint firstAttribute="height" constant="46" id="ePz-wa-0Pv"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="speaker.wave.2.fill" catalog="system" title=" ">
+                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/ˌedʒuˈkeɪʃn/" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4o3-UL-6M9">
+                    <rect key="frame" x="76" y="102.66666666666667" width="317" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" name="custom_dark_gray"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="4o3-UL-6M9" firstAttribute="top" secondItem="SqM-c2-HhO" secondAttribute="bottom" constant="30" id="1m7-YO-gCh"/>
+                <constraint firstItem="4o3-UL-6M9" firstAttribute="leading" secondItem="hpS-bC-gTK" secondAttribute="trailing" constant="10" id="8f3-RO-Hux"/>
+                <constraint firstItem="SqM-c2-HhO" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="GzD-4b-tWN"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="4o3-UL-6M9" secondAttribute="trailing" id="cYa-TF-8m7"/>
+                <constraint firstItem="SqM-c2-HhO" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="ecG-8C-yQt"/>
+                <constraint firstItem="hpS-bC-gTK" firstAttribute="top" secondItem="SqM-c2-HhO" secondAttribute="bottom" constant="20" id="jp3-dU-hZ7"/>
+                <constraint firstItem="hpS-bC-gTK" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="por-as-IYK"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="40" y="21"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="speaker.wave.2.fill" catalog="system" width="128" height="88"/>
+        <namedColor name="AccentColor">
+            <color red="0.35699999332427979" green="0.83899998664855957" blue="0.99199998378753662" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="custom_dark_gray">
+            <color red="0.5690000057220459" green="0.66299998760223389" blue="0.6940000057220459" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -8,5 +8,9 @@
 import Foundation
 
 protocol SearchCoordinatorProtocol: Coordinator {
-    func goToResultViewController()
+    func goToResultViewController(with searchResponse:[SearchWordResponse])
+    
+    func goToSubscribreViewController()
+    
+    func showError(message: String)
 }

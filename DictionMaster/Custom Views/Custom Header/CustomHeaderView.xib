@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CustomHeaderView" customModule="DictionMaster" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="200"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pF0-jp-UO2">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="200"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Education" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I71-6c-m3n">
+                            <rect key="frame" x="20" y="50" width="202.66666666666666" height="52.666666666666657"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="45"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r9u-47-Tb1">
+                            <rect key="frame" x="20" y="122.66666666666669" width="46" height="46"/>
+                            <color key="backgroundColor" name="AccentColor"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="46" id="AxA-ul-Q71"/>
+                                <constraint firstAttribute="height" constant="46" id="NU4-3X-Xhy"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" image="speaker.wave.2.fill" catalog="system" title=" ">
+                                <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </buttonConfiguration>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/ˌedʒuˈkeɪʃn/" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5fR-hb-3bC">
+                            <rect key="frame" x="76" y="137" width="93" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" name="custom_dark_gray"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="5fR-hb-3bC" firstAttribute="leading" secondItem="r9u-47-Tb1" secondAttribute="trailing" constant="10" id="TdW-CV-ihg"/>
+                        <constraint firstItem="5fR-hb-3bC" firstAttribute="top" secondItem="I71-6c-m3n" secondAttribute="bottom" constant="34.329999999999998" id="gVN-AI-whU"/>
+                        <constraint firstItem="r9u-47-Tb1" firstAttribute="leading" secondItem="pF0-jp-UO2" secondAttribute="leading" constant="20" id="jhE-Po-hJ2"/>
+                        <constraint firstItem="I71-6c-m3n" firstAttribute="leading" secondItem="pF0-jp-UO2" secondAttribute="leading" constant="20" id="pBc-rW-yAT"/>
+                        <constraint firstItem="I71-6c-m3n" firstAttribute="top" secondItem="pF0-jp-UO2" secondAttribute="top" constant="50" id="sho-I6-2RA"/>
+                        <constraint firstItem="r9u-47-Tb1" firstAttribute="top" secondItem="I71-6c-m3n" secondAttribute="bottom" constant="20" id="zmL-GC-FoD"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <constraints>
+                <constraint firstItem="pF0-jp-UO2" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="ABF-0V-3eS"/>
+                <constraint firstItem="pF0-jp-UO2" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Vvv-af-2ZN"/>
+                <constraint firstAttribute="bottom" secondItem="pF0-jp-UO2" secondAttribute="bottom" id="mYk-lE-74f"/>
+                <constraint firstItem="pF0-jp-UO2" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="tI5-Da-hVL"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="phoneticTextLabel" destination="5fR-hb-3bC" id="Wei-jA-RzK"/>
+                <outlet property="playSoundButton" destination="r9u-47-Tb1" id="zDQ-B7-rP3"/>
+                <outlet property="wordLabel" destination="I71-6c-m3n" id="HqA-6Y-8H3"/>
+            </connections>
+            <point key="canvasLocation" x="136.64122137404578" y="20.422535211267608"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="speaker.wave.2.fill" catalog="system" width="128" height="88"/>
+        <namedColor name="AccentColor">
+            <color red="0.35699999332427979" green="0.83899998664855957" blue="0.99199998378753662" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="custom_dark_gray">
+            <color red="0.5690000057220459" green="0.66299998760223389" blue="0.6940000057220459" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

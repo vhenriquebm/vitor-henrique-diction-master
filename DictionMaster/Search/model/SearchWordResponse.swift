@@ -7,23 +7,43 @@
 
 import Foundation
 
-struct SearchWordResponse: Codable {
-    let word, phonetic: String
-    let phonetics: [Phonetic]
+public struct SearchWordResponse: Codable {
+    let word, phonetic: String?
+    let phonetics: [Phonetics]
     let meanings: [Meaning]
 }
 
-struct Meaning: Codable {
-    let partOfSpeech: String
-    let definitions: [Definition]
+@objc(Phonetics)
+public class Phonetics: NSObject, Codable {
+    @objc var text: String?
+    @objc var audio: String?
+    
+    init(text: String?, audio: String?) {
+        self.text = text
+        self.audio = audio
+    }
 }
 
-struct Definition: Codable {
-    let definition, example: String?
-//        let synonyms, antonyms: [JSONAny]
+@objc(Meaning)
+public class Meaning: NSObject, Codable {
+    @objc var partOfSpeech: String
+    @objc var definitions: [Definition]
+    
+    init(partOfSpeech: String, definitions: [Definition]) {
+        self.partOfSpeech = partOfSpeech
+        self.definitions = definitions
+    }
 }
 
-struct Phonetic: Codable {
-    let text: String?
-    let audio: String?
+@objc(Definition)
+class Definition: NSObject, Codable {
+    @objc var definition: String
+    @objc var example: String?
+    
+    init(definition: String, example: String?) {
+        self.definition = definition
+        self.example = example
+    }
 }
+
+
