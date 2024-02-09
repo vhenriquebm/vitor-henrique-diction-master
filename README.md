@@ -15,6 +15,10 @@ Diction Master é um aplicativo iOS desenvolvido em Swift que oferece recursos p
 ## Funcionalidades
 
 - Busca de palavras: Pesquise o significado de palavras em inglês.
+  
+## API
+
+- https://api.dictionaryapi.dev/api/v2/entries/en/education
 
 ## Contato
 vhenriquebm@gmail.com
