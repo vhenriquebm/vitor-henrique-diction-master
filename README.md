@@ -9,19 +9,19 @@ Diction Master é um aplicativo iOS desenvolvido em Swift que oferece recursos p
 - **Core Data**: Banco de dados local para armazenamento e persistente de dados.
 - **RxSwift e RxCocoa**: Utilizados para programação reativa, permitindo uma gestão eficiente dos eventos na interface do usuário.
 - **Storyboard / XIB**: Utilizados para a criação da interface do usuário de forma visual e intuitiva.
-- **API Diction Master**: Fornece acesso a um vasto banco de dados de palavras e seus significados.
+- **Free Dictionary API**: Fornece acesso a um vasto banco de dados de palavras e seus significados.
 - **Arquitetura MVVM-C**: Organização clara e separação de responsabilidades entre Model, View, ViewModel e Coordinator.
 
 ## Funcionalidades
 
 - Busca de palavras: Pesquise o significado de palavras em inglês.
   
-## API
+## Free Dictionary API
 
-- https://api.dictionaryapi.dev/api/v2/entries/en/education
+- [https://api.dictionaryapi.dev/api/v2/entries/en/education](https://dictionaryapi.dev/)
 
 ## Contato
-vhenriquebm@gmail.com
+- vhenriquebm@gmail.com
 
 
 
